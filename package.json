@@ -1,5 +1,5 @@
 {
-  "name": "@sample-app/nestjs-mock-auth",
+  "name": "@r-tanner-f/nestjs-mock-auth",
   "version": "0.1.0",
   "description": "NestJS mock authentication middleware with JWT parsing and role-based access control (development mode only)",
   "main": "dist/index.js",
