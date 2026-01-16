@@ -22,6 +22,18 @@
   ],
   "author": "Bitovi Corp",
   "license": "MIT",
+   "repository": {
+    "type": "git",
+    "url": "https://github.com/bitovi/bitovi-corp.git",
+    "directory": "auth-middleware"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "peerDependencies": {
     "@nestjs/common": "^11.0.0",
     "@nestjs/core": "^11.0.0",
