@@ -3,7 +3,6 @@ import { AuthGuard } from '../guards/auth.guard';
 import { RequireRolesGuard } from '../guards/require-roles.guard';
 import { RequireAllRolesGuard } from '../guards/require-all-roles.guard';
 import { JwtParserService } from '../services/jwt-parser.service';
-import { UserClaimsService } from '../services/user-claims.service';
 
 /**
  * AuthModule
@@ -21,7 +20,7 @@ import { UserClaimsService } from '../services/user-claims.service';
  * ```
  */
 @Module({
-  providers: [JwtParserService, UserClaimsService, AuthGuard, RequireRolesGuard, RequireAllRolesGuard],
-  exports: [AuthGuard, RequireRolesGuard, RequireAllRolesGuard, JwtParserService, UserClaimsService],
+  providers: [JwtParserService, AuthGuard, RequireRolesGuard, RequireAllRolesGuard],
+  exports: [AuthGuard, RequireRolesGuard, RequireAllRolesGuard, JwtParserService],
 })
 export class AuthModule {}

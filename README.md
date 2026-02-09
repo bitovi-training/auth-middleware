@@ -18,7 +18,7 @@ A lightweight NestJS authentication middleware that provides JWT-based authentic
 ## Installation
 
 ```bash
-npm install @sample-app/nestjs-mock-auth
+npm install @bitovi-corp/auth-middleware
 ```
 
 ### Peer Dependencies
@@ -35,7 +35,7 @@ npm install @nestjs/common@^11.0.0 @nestjs/core@^11.0.0 reflect-metadata rxjs
 
 ```typescript
 import { Module } from '@nestjs/common';
-import { AuthModule } from '@sample-app/nestjs-mock-auth';
+import { AuthModule } from '@bitovi-corp/auth-middleware';
 
 @Module({
   imports: [AuthModule],
@@ -48,7 +48,7 @@ export class AppModule {}
 
 ```typescript
 import { Controller, Get, UseGuards } from '@nestjs/common';
-import { AuthGuard, User, UserClaims } from '@sample-app/nestjs-mock-auth';
+import { AuthGuard, User, UserClaims } from '@bitovi-corp/auth-middleware';
 
 @Controller('api')
 @UseGuards(AuthGuard)
@@ -70,7 +70,7 @@ export class ApiController {
 
 ```typescript
 import { Controller, Get, UseGuards } from '@nestjs/common';
-import { AuthGuard, RequireRolesGuard, Roles } from '@sample-app/nestjs-mock-auth';
+import { AuthGuard, RequireRolesGuard, Roles } from '@bitovi-corp/auth-middleware';
 
 @Controller('admin')
 @UseGuards(AuthGuard, RequireRolesGuard)
@@ -88,7 +88,7 @@ export class AdminController {
 
 ```typescript
 import { Controller, Delete, UseGuards } from '@nestjs/common';
-import { AuthGuard, RequireAllRolesGuard, RequireAllRoles } from '@sample-app/nestjs-mock-auth';
+import { AuthGuard, RequireAllRolesGuard, RequireAllRoles } from '@bitovi-corp/auth-middleware';
 
 @Controller('admin')
 @UseGuards(AuthGuard, RequireAllRolesGuard)
@@ -181,18 +181,6 @@ interface UserClaims {
   roles: string[];    // User roles (defaults to [] if missing)
   exp?: number;       // Token expiration (Unix timestamp)
   iat?: number;       // Token issued at (Unix timestamp)
-}
-```
-
-#### `AuthError`
-
-```typescript
-interface AuthError {
-  statusCode: number;   // HTTP status code (401 or 403)
-  code: string;         // Error code (INVALID_TOKEN or INSUFFICIENT_PERMISSIONS)
-  message: string;      // Human-readable error message
-  timestamp: string;    // ISO 8601 timestamp
-  path: string;         // Request path
 }
 ```
 
