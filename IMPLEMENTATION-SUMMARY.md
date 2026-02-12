@@ -79,15 +79,12 @@ Successfully implemented a complete NestJS mock authentication middleware provid
 
 **Implemented Features**:
 - @User() decorator with optional property extraction
-- UserClaimsService for programmatic access
-- GetUserClaims() helper function
 - Comprehensive JSDoc documentation
 
 **Validation**:
 - ✅ @User() → returns full UserClaims object
 - ✅ @User('email') → returns email string
 - ✅ @User('roles') → returns roles array
-- ✅ GetUserClaims(request) → returns claims or null
 
 ## Architecture & Design
 
@@ -105,11 +102,9 @@ src/
 │   ├── roles.decorator.ts     # @Roles() route decorator
 │   └── require-all-roles.decorator.ts # @RequireAllRoles() decorator
 ├── models/
-│   ├── user-claims.interface.ts   # UserClaims type
-│   └── auth-error.interface.ts    # AuthError type
+│   └── user-claims.interface.ts   # UserClaims type
 ├── services/
-│   ├── jwt-parser.service.ts      # JWT parsing logic
-│   └── user-claims.service.ts     # Claims access helpers
+│   └── jwt-parser.service.ts      # JWT parsing logic
 ├── exceptions/
 │   ├── invalid-token.exception.ts # 401 exception
 │   └── insufficient-permissions.exception.ts # 403 exception
@@ -218,13 +213,12 @@ Before production use, must add:
 
 ### ✅ Type Definitions
 - UserClaims interface
-- AuthError interface
 - Full TypeScript declarations in dist/
 
 ## Package Configuration
 
 ### package.json
-- **Name**: @sample-app/nestjs-mock-auth
+- **Name**: @bitovi-corp/auth-middleware
 - **Version**: 0.1.0
 - **License**: MIT
 - **Main**: dist/index.js
