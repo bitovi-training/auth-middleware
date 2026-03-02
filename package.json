@@ -1,6 +1,6 @@
 {
-  "name": "@bitovi-corp/auth-middleware",
-  "version": "0.1.0",
+  "name": "@bitovi-training/auth-middleware",
+  "version": "0.2.1",
   "description": "NestJS mock authentication middleware with JWT parsing and role-based access control (development mode only)",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -20,11 +20,11 @@
     "mock",
     "development"
   ],
-  "author": "Bitovi Corp",
+  "author": "Bitovi Training",
   "license": "MIT",
    "repository": {
     "type": "git",
-    "url": "https://github.com/bitovi/bitovi-corp.git",
+    "url": "https://github.com/bitovi-training/auth-middleware.git",
     "directory": "auth-middleware"
   },
   "publishConfig": {

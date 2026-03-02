@@ -218,7 +218,7 @@ Before production use, must add:
 ## Package Configuration
 
 ### package.json
-- **Name**: @bitovi-corp/auth-middleware
+- **Name**: @bitovi-training/auth-middleware
 - **Version**: 0.1.0
 - **License**: MIT
 - **Main**: dist/index.js

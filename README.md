@@ -18,7 +18,7 @@ A lightweight NestJS authentication middleware that provides JWT-based authentic
 ## Installation
 
 ```bash
-npm install @bitovi-corp/auth-middleware
+npm install @bitovi-training/auth-middleware
 ```
 
 ### Peer Dependencies
@@ -35,7 +35,7 @@ npm install @nestjs/common@^11.0.0 @nestjs/core@^11.0.0 reflect-metadata rxjs
 
 ```typescript
 import { Module } from '@nestjs/common';
-import { AuthModule } from '@bitovi-corp/auth-middleware';
+import { AuthModule } from '@bitovi-training/auth-middleware';
 
 @Module({
   imports: [AuthModule],
@@ -48,7 +48,7 @@ export class AppModule {}
 
 ```typescript
 import { Controller, Get, UseGuards } from '@nestjs/common';
-import { AuthGuard, User, UserClaims } from '@bitovi-corp/auth-middleware';
+import { AuthGuard, User, UserClaims } from '@bitovi-training/auth-middleware';
 
 @Controller('api')
 @UseGuards(AuthGuard)
@@ -70,7 +70,7 @@ export class ApiController {
 
 ```typescript
 import { Controller, Get, UseGuards } from '@nestjs/common';
-import { AuthGuard, RequireRolesGuard, Roles } from '@bitovi-corp/auth-middleware';
+import { AuthGuard, RequireRolesGuard, Roles } from '@bitovi-training/auth-middleware';
 
 @Controller('admin')
 @UseGuards(AuthGuard, RequireRolesGuard)
@@ -88,7 +88,7 @@ export class AdminController {
 
 ```typescript
 import { Controller, Delete, UseGuards } from '@nestjs/common';
-import { AuthGuard, RequireAllRolesGuard, RequireAllRoles } from '@bitovi-corp/auth-middleware';
+import { AuthGuard, RequireAllRolesGuard, RequireAllRoles } from '@bitovi-training/auth-middleware';
 
 @Controller('admin')
 @UseGuards(AuthGuard, RequireAllRolesGuard)

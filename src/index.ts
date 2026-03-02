@@ -6,7 +6,7 @@
  * 
  * ⚠️ WARNING: Does not verify JWT signatures. DO NOT use in production without proper verification.
  * 
- * @module @bitovi-corp/auth-middleware
+ * @module @bitovi-training/auth-middleware
  */
 
 // Guards
